@@ -45,7 +45,7 @@ body {
   background-color: #000;
   color: #fff;
   display: block;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
   top: 0;
   left: 0;
   display: flex;
@@ -71,13 +71,13 @@ body {
 .container:nth-child(2) .box1:hover::after {
   left: 0;
   top: 0;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
   transform: scaleY(1);
 }
 .container:nth-child(2) .box1:hover::before {
   left: 0;
   top: -100%;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
   transform: scaleY(0);
 }
 .container:nth-child(3) .box {
@@ -97,15 +97,17 @@ body {
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  transition: 0.5s ease-in-out;
 }
 .container:nth-child(4) .box a {
   color: #fff;
   letter-spacing: 3px;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
   text-decoration: none;
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
 .container:nth-child(4) .box a::after {
   content: "";
@@ -114,17 +116,23 @@ body {
   height: 100%;
   border-bottom: 1px solid #fff;
   transform: scaleX(0);
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
 }
 .container:nth-child(4) .box::after {
   left: 0;
   top: 0;
   transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+}
+.container:nth-child(4) .box:hover {
+  transition: 0.5s ease-in-out;
 }
 .container:nth-child(4) .box:hover a::after {
+  transition: 0.5s ease-in-out;
   transform: scaleX(1);
 }
 .container:nth-child(4) .box:hover::after {
+  transition: 0.5s ease-in-out;
   transform: scaleX(1);
 }
 .container .box {
@@ -139,9 +147,10 @@ body {
 .container .box::after {
   content: "";
   position: absolute;
+  color: #fff;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: #000;
   display: block;
   transition: 0.5s ease-in-out;
   border-radius: 30px;
