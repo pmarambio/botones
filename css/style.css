@@ -247,7 +247,7 @@ section#section_two .btn-1 span::after {
 }
 section#section_two .btn-2::before,
 section#section_two .btn-2::after {
-  transition-delay: 0.2s;
+  transition-delay: 0s;
 }
 section#section_two .btn-2::before {
   right: 0;
@@ -267,7 +267,7 @@ section#section_two .btn-2:hover span::after {
 }
 section#section_two .btn-2 span::before,
 section#section_two .btn-2 span::after {
-  transition-delay: 0s;
+  transition-delay: 0.2s;
 }
 section#section_two .btn-2 span::before {
   right: 0;
