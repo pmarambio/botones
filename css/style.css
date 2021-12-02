@@ -6,43 +6,67 @@
 body {
   width: 100%;
   height: 100%;
+  background-color: #ff0;
 }
-.container {
+#section_one {
   width: 100%;
   height: 100%;
   display: flex;
-}
-.container:first-child .box {
   position: relative;
 }
-.container:first-child .box::after {
+#section_one .box {
+  width: 20%;
+  height: 5vh;
+  margin: 2.5%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: 0.5s ease-in-out;
+  background-color: #8b0000;
+}
+#section_one .box::after {
+  content: "";
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  display: block;
+  transition: 0.5s ease-in-out;
+  border-radius: 30px;
+}
+#section_one .box a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+}
+#section_one .box:first-child {
+  position: relative;
+}
+#section_one .box:first-child::after {
   left: 0;
   top: 100%;
 }
-.container:first-child .box:hover::after {
+#section_one .box:first-child:hover::after {
   top: 0;
 }
-.container:nth-child(2) .box {
-  position: relative;
-}
-.container:nth-child(2) .box::after {
-  left: -100%;
-  top: 100%;
-}
-.container:nth-child(2) .box:hover::after {
-  left: 0;
-  top: 0;
-}
-.container:nth-child(2) .box1 {
+#section_one .box:nth-child(2) a {
   border-radius: 0;
   background-color: #fff;
 }
-.container:nth-child(2) .box1::before {
+#section_one .box:nth-child(2) a::before {
   content: "Front";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: #8b0000;
   color: #fff;
   display: block;
   transition: 0.5s ease-in-out;
@@ -54,43 +78,53 @@ body {
   transform: scaleY(1);
   border-radius: 30px;
 }
-.container:nth-child(2) .box1::after {
+#section_one .box:nth-child(2) a::after {
   content: "Back";
+  position: absolute;
+  height: 100%;
+  width: 100%;
   left: 0;
   top: 100%;
-  border-top: 1px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #808080;
+  background-color: #000;
   color: #fff;
   z-index: 1;
-  transform: scaleY(0);
+  transform: scaleY(1);
   border-radius: 30px;
 }
-.container:nth-child(2) .box1:hover::after {
+#section_one .box:nth-child(2) a:hover::after {
   left: 0;
   top: 0;
   transition: 0.5s ease-in-out;
   transform: scaleY(1);
 }
-.container:nth-child(2) .box1:hover::before {
+#section_one .box:nth-child(2) a:hover::before {
   left: 0;
   top: -100%;
   transition: 0.5s ease-in-out;
-  transform: scaleY(0);
+  transform: scaleY(1);
 }
-.container:nth-child(3) .box {
+#section_one .box:nth-child(3)::after {
+  left: -100%;
+  top: 100%;
+}
+#section_one .box:nth-child(3):hover::after {
+  left: 0;
+  top: 0;
+}
+#section_one .box:nth-child(4) {
   position: relative;
 }
-.container:nth-child(3) .box::after {
+#section_one .box:nth-child(4)::after {
   left: -100%;
   top: 0;
 }
-.container:nth-child(3) .box:hover::after {
+#section_one .box:nth-child(4):hover::after {
   left: 0;
 }
-.container:nth-child(4) .box {
+#section_one .box:nth-child(5) {
   text-align: center;
   position: relative;
   display: flex;
@@ -99,7 +133,29 @@ body {
   font-family: sans-serif;
   transition: 0.5s ease-in-out;
 }
-.container:nth-child(4) .box a {
+#section_one .box:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+  background-color: #000;
+}
+#section_one .box:nth-child(5):hover {
+  transition: 0.5s ease-in-out;
+}
+#section_one .box:nth-child(5):hover::after {
+  transition: 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+#section_one .box:nth-child(5):hover a::after {
+  transition: 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+#section_one .box:nth-child(5) a {
   color: #fff;
   letter-spacing: 3px;
   transition: 0.5s ease-in-out;
@@ -108,70 +164,25 @@ body {
   display: flex;
   justify-content: center;
   z-index: 999;
+  height: max-content;
+  width: max-content;
 }
-.container:nth-child(4) .box a::after {
+#section_one .box:nth-child(5) a::after {
   content: "";
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   border-bottom: 1px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
   transform: scaleX(0);
   transition: 0.5s ease-in-out;
 }
-.container:nth-child(4) .box::after {
-  left: 0;
-  top: 0;
-  transform: scaleX(0);
-  transition: 0.5s ease-in-out;
-}
-.container:nth-child(4) .box:hover {
-  transition: 0.5s ease-in-out;
-}
-.container:nth-child(4) .box:hover a::after {
-  transition: 0.5s ease-in-out;
-  transform: scaleX(1);
-}
-.container:nth-child(4) .box:hover::after {
-  transition: 0.5s ease-in-out;
-  transform: scaleX(1);
-}
-.container .box {
-  width: 20%;
-  height: 5vh;
-  margin: 2.5%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px;
-  transition: 0.5s ease-in-out;
-}
-.container .box::after {
-  content: "";
-  position: absolute;
-  color: #fff;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  display: block;
-  transition: 0.5s ease-in-out;
-  border-radius: 30px;
-}
-.container .box1 {
-  background-color: #c94a36;
-}
-.container .box2 {
-  background-color: #ebbd26;
-}
-.container .box3 {
-  background-color: #78bd40;
-}
-.container .box4 {
-  background-color: #1b36bf;
-}
-section#section_two {
+#section_two {
   width: 100%;
   display: flex;
 }
-section#section_two a {
+#section_two a {
   display: inline-block;
   position: relative;
   background: none;
@@ -181,245 +192,265 @@ section#section_two a {
   cursor: pointer;
   margin: 20px 30px;
   background: rgba(0,0,0,0.09);
-  background: #808080;
+  background: #00008b;
+  font-family: sans-serif;
+  text-decoration: none;
 }
-section#section_two a span {
+#section_two a span {
   display: block;
   padding: 15px 40px;
 }
-section#section_two a span::before,
-section#section_two a span::after {
+#section_two a span::before,
+#section_two a span::after {
   content: "";
   width: 5px;
   height: 0;
   position: absolute;
   transition: all 0.2s linear;
-  background: #1b36bf;
 }
-section#section_two a::before,
-section#section_two a::after {
+#section_two a span::before {
+  background-color: #750979;
+}
+#section_two a span::after {
+  background-color: #ff9700;
+}
+#section_two a::before,
+#section_two a::after {
   content: "";
   width: 0;
   height: 5px;
   position: absolute;
   transition: all 0.2s linear;
-  background: #1b36bf;
+  background: linear-gradient(-90deg, #750979 0%, #ff9700 100%);
 }
-section#section_two a:hover::before,
-section#section_two a:hover::after {
+#section_two a:hover::before,
+#section_two a:hover::after {
   width: 100%;
 }
-section#section_two a:hover span::before,
-section#section_two a:hover span::after {
+#section_two a:hover span::before,
+#section_two a:hover span::after {
   height: 100%;
 }
-section#section_two .btn-1::before,
-section#section_two .btn-1::after {
-  transition-delay: 0.2s;
+#section_two a:nth-child(7):hover::before,
+#section_two a:nth-child(7):hover::after {
+  width: 70%;
 }
-section#section_two .btn-1::before {
+#section_two a:nth-child(7):hover span::before,
+#section_two a:nth-child(7):hover span::after {
+  height: 70%;
+}
+#section_two .btn-1::before,
+#section_two .btn-1::after {
+  transition-delay: 0.2s;
+  background: linear-gradient(90deg, #750979 0%, #ff9700 100%);
+}
+#section_two .btn-1::before {
   right: 0;
   top: 0;
 }
-section#section_two .btn-1::after {
+#section_two .btn-1::after {
   left: 0;
   bottom: 0;
 }
-section#section_two .btn-1:hover::before,
-section#section_two .btn-1:hover::after {
+#section_two .btn-1:hover::before,
+#section_two .btn-1:hover::after {
   transition-delay: 0s;
 }
-section#section_two .btn-1:hover span::before,
-section#section_two .btn-1:hover span::after {
+#section_two .btn-1:hover span::before,
+#section_two .btn-1:hover span::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-1 span::before,
-section#section_two .btn-1 span::after {
+#section_two .btn-1 span::before,
+#section_two .btn-1 span::after {
   transition-delay: 0s;
 }
-section#section_two .btn-1 span::before {
+#section_two .btn-1 span::before {
   left: 0;
   top: 0;
 }
-section#section_two .btn-1 span::after {
+#section_two .btn-1 span::after {
   right: 0;
   bottom: 0;
 }
-section#section_two .btn-2::before,
-section#section_two .btn-2::after {
+#section_two .btn-2::before,
+#section_two .btn-2::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-2::before {
+#section_two .btn-2::before {
   right: 0;
   top: 0;
 }
-section#section_two .btn-2::after {
+#section_two .btn-2::after {
   left: 0;
   bottom: 0;
 }
-section#section_two .btn-2:hover::before,
-section#section_two .btn-2:hover::after {
+#section_two .btn-2:hover::before,
+#section_two .btn-2:hover::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-2:hover span::before,
-section#section_two .btn-2:hover span::after {
+#section_two .btn-2:hover span::before,
+#section_two .btn-2:hover span::after {
   transition-delay: 0s;
 }
-section#section_two .btn-2 span::before,
-section#section_two .btn-2 span::after {
+#section_two .btn-2 span::before,
+#section_two .btn-2 span::after {
   transition-delay: 0s;
 }
-section#section_two .btn-2 span::before {
+#section_two .btn-2 span::before {
   right: 0;
   bottom: 0;
 }
-section#section_two .btn-2 span::after {
+#section_two .btn-2 span::after {
   left: 0;
   top: 0;
 }
-section#section_two .btn-3::before {
+#section_two .btn-3::before {
   right: 0;
   top: 0;
   transition-delay: 0.4s;
 }
-section#section_two .btn-3::after {
+#section_two .btn-3::after {
   left: 0;
   bottom: 0;
   transition-delay: 0s;
 }
-section#section_two .btn-3:hover::before {
+#section_two .btn-3:hover::before {
   transition-delay: 0.2s;
 }
-section#section_two .btn-3:hover::after {
+#section_two .btn-3:hover::after {
   transition-delay: 0.6s;
 }
-section#section_two .btn-3:hover span::before {
+#section_two .btn-3:hover span::before {
   transition-delay: 0s;
 }
-section#section_two .btn-3:hover span::after {
+#section_two .btn-3:hover span::after {
   transition-delay: 0.4s;
 }
-section#section_two .btn-3 span::before {
+#section_two .btn-3 span::before {
   right: 0;
   bottom: 0;
   transition-delay: 0.6s;
 }
-section#section_two .btn-3 span::after {
+#section_two .btn-3 span::after {
   left: 0;
   top: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-4::before {
+#section_two .btn-4::before {
   right: 0;
   top: 0;
   transition-delay: 0s;
 }
-section#section_two .btn-4::after {
+#section_two .btn-4::after {
   left: 0;
   bottom: 0;
   transition-delay: 0s;
 }
-section#section_two .btn-4:hover::before,
-section#section_two .btn-4:hover::after {
+#section_two .btn-4:hover::before,
+#section_two .btn-4:hover::after {
   transition-delay: 0s;
 }
-section#section_two .btn-4:hover span::before,
-section#section_two .btn-4:hover span::after {
+#section_two .btn-4:hover span::before,
+#section_two .btn-4:hover span::after {
   transition-delay: 0s;
 }
-section#section_two .btn-4 span::before {
+#section_two .btn-4 span::before {
   right: 0;
   bottom: 0;
   transition-delay: 0s;
 }
-section#section_two .btn-4 span::after {
+#section_two .btn-4 span::after {
   left: 0;
   top: 0;
   transition-delay: 0s;
 }
-section#section_two .btn-5::before {
+#section_two .btn-5::before {
   left: 0;
   top: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-5::after {
+#section_two .btn-5::after {
   right: 0;
   bottom: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-5:hover::before,
-section#section_two .btn-5:hover::after {
+#section_two .btn-5:hover::before,
+#section_two .btn-5:hover::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-5:hover span::before,
-section#section_two .btn-5:hover span::after {
+#section_two .btn-5:hover span::before,
+#section_two .btn-5:hover span::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-5 span::before {
+#section_two .btn-5 span::before {
   right: 0;
   bottom: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-5 span::after {
+#section_two .btn-5 span::after {
   left: 0;
   top: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-6::before {
+#section_two .btn-6::before {
   left: 50%;
   top: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-6::after {
+#section_two .btn-6::after {
   left: 50%;
   bottom: 0;
   transition-delay: 0.2s;
 }
-section#section_two .btn-6:hover::before,
-section#section_two .btn-6:hover::after {
+#section_two .btn-6:hover::before,
+#section_two .btn-6:hover::after {
   transition-delay: 0.2s;
   left: 0;
 }
-section#section_two .btn-6:hover span::before,
-section#section_two .btn-6:hover span::after {
+#section_two .btn-6:hover span::before,
+#section_two .btn-6:hover span::after {
   transition-delay: 0.2s;
   top: 0;
 }
-section#section_two .btn-6 span::before {
+#section_two .btn-6 span::before {
   right: 0;
   top: 50%;
   transition-delay: 0.2s;
 }
-section#section_two .btn-6 span::after {
+#section_two .btn-6 span::after {
   left: 0;
   top: 50%;
   transition-delay: 0.2s;
 }
-section#section_two .btn-7::before {
+#section_two .btn-7::before {
   left: 50%;
   top: 0;
   transition-delay: 0.2s;
+  background: linear-gradient(90deg, rgba(117,9,121,0) 0%, #750979 25%, #ff9700 75%, rgba(255,151,0,0) 100%);
 }
-section#section_two .btn-7::after {
+#section_two .btn-7::after {
   right: 50%;
   bottom: 0;
   transition-delay: 0.2s;
+  background: linear-gradient(90deg, rgba(117,9,121,0) 0%, #750979 25%, #ff9700 75%, rgba(255,151,0,0) 100%);
 }
-section#section_two .btn-7:hover::before,
-section#section_two .btn-7:hover::after {
+#section_two .btn-7:hover::before,
+#section_two .btn-7:hover::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-7:hover span::before,
-section#section_two .btn-7:hover span::after {
+#section_two .btn-7:hover span::before,
+#section_two .btn-7:hover span::after {
   transition-delay: 0.2s;
 }
-section#section_two .btn-7 span::before {
+#section_two .btn-7 span::before {
   right: 0;
   bottom: 50%;
   transition-delay: 0.2s;
+  background: linear-gradient(180deg, rgba(117,9,121,0) 0%, #ff9700 25%, #ff9700 75%, rgba(255,151,0,0) 100%);
 }
-section#section_two .btn-7 span::after {
+#section_two .btn-7 span::after {
   left: 0;
   top: 50%;
   transition-delay: 0.2s;
+  background: linear-gradient(180deg, rgba(117,9,121,0) 0%, #750979 25%, #750979 75%, rgba(255,151,0,0) 100%);
 }

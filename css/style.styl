@@ -10,124 +10,12 @@ azul = #1b36bf
 body
     width 100%
     height 100%
-
-.container
+    background-color yellow
+#section_one
     width 100%
     height 100%
     display flex
-    &:first-child
-       .box
-            position relative
-            &::after
-                left 0
-                top 100% 
-            &:hover
-                &::after
-                    top 0
-    &:nth-child(2)
-       .box
-            position relative
-            &::after
-                left -100%
-                top 100%
-            &:hover
-                &::after
-                    left 0
-                    top 0
-        .box1
-            border-radius 0
-            background-color white
-            &::before
-                content "Front"
-                position absolute
-                height 100%
-                width 100%
-                background-color black
-                color white
-                display block
-                transition .5s ease-in-out
-                top 0
-                left 0
-                display flex
-                justify-content center
-                align-items center
-                transform scaleY(1)
-                border-radius 30px
-            &::after
-                content "Back"
-                left 0
-                top 100%
-                border-top 1px solid white
-                display flex
-                justify-content center
-                align-items center
-                background-color grey
-                color white
-                z-index 1
-                transform scaleY(0)
-                border-radius 30px
-            &:hover
-                &::after
-                    left 0
-                    top 0
-                    transition .5s ease-in-out
-                    transform scaleY(1)
-                &::before   
-                    left 0
-                    top -100% 
-                    transition .5s ease-in-out
-                    transform scaleY(0)
-            
-
-    &:nth-child(3)
-       .box
-            position relative
-            &::after
-                left -100%
-                top 0
-            &:hover
-                &::after
-                    left 0
-    &:nth-child(4)
-       .box
-            text-align center
-            position relative
-            display flex
-            align-items center
-            justify-content center
-            font-family sans-serif
-            transition .5s ease-in-out
-            a
-                color white
-                letter-spacing 3px
-                transition .5s ease-in-out
-                text-decoration none
-                position relative
-                display flex
-                justify-content center
-                z-index 999
-                &::after
-                    content ""
-                    position absolute
-                    width 100%
-                    height 100%
-                    border-bottom 1px solid white
-                    transform: scaleX(0)
-                    transition .5s ease-in-out
-            &::after
-                left 0
-                top 0
-                transform: scaleX(0)
-                transition .5s ease-in-out
-            &:hover
-                transition .5s ease-in-out
-                a
-                    &::after
-                        transition .5s ease-in-out
-                        transform scaleX(1)
-                &::after
-                    transition .5s ease-in-out
-                    transform scaleX(1)            
+    position relative
     .box
         width 20%
         height 5vh
@@ -136,6 +24,7 @@ body
         overflow hidden
         border-radius 30px
         transition .5s ease-in-out
+        background-color darkred
         &::after
             content ""
             position absolute
@@ -146,16 +35,139 @@ body
             display block
             transition .5s ease-in-out
             border-radius 30px
-    .box1
-        background-color rojo
-    .box2
-        background-color amarillo
-    .box3
-        background-color verde
-    .box4
-        background-color azul
+        a
+            width 100%
+            height 100%
+            display flex
+            color white
+            font-family sans-serif
+            text-align center
+            justify-content center
+            align-items center
+            position absolute
+            z-index 99
+            
+        &:first-child
+            position relative
+            &::after
+                left 0
+                top 100% 
+            &:hover
+                &::after
+                    top 0
+        &:nth-child(2)
+            a
+                border-radius 0
+                background-color white
+                &::before
+                    content "Front"
+                    position absolute
+                    height 100%
+                    width 100%
+                    background-color darkred
+                    color white
+                    display block
+                    transition .5s ease-in-out
+                    top 0
+                    left 0
+                    display flex
+                    justify-content center
+                    align-items center
+                    transform scaleY(1)
+                    border-radius 30px
+                &::after
+                    content "Back"
+                    position absolute
+                    height 100%
+                    width 100%
+                    left 0
+                    top 100%
+                    display flex
+                    justify-content center
+                    align-items center
+                    background-color black
+                    color white
+                    z-index 1
+                    transform scaleY(1)
+                    border-radius 30px
+                &:hover
+                    &::after
+                        left 0
+                        top 0
+                        transition .5s ease-in-out
+                        transform scaleY(1)
+                    &::before   
+                        left 0
+                        top -100% 
+                        transition .5s ease-in-out
+                        transform scaleY(1)
+        &:nth-child(3)
+            &::after
+                left -100%
+                top 100%
+            &:hover
+                &::after
+                    left 0
+                    top 0     
+        &:nth-child(4)
+            position relative
+            &::after
+                left -100%
+                top 0
+            &:hover
+                &::after
+                    left 0
+        &:nth-child(5)
+            text-align center
+            position relative
+            display flex
+            align-items center
+            justify-content center
+            font-family sans-serif
+            transition .5s ease-in-out
+            &::after
+                content ""
+                position absolute
+                width 100%
+                height 100%
+                left 0
+                top 0
+                transform scaleX(0)
+                transition .5s ease-in-out
+                background-color black
+            &:hover
+                transition .5s ease-in-out
+                &::after
+                    transition .5s ease-in-out
+                    transform scaleX(1)   
+                a
+                    &::after
+                        transition .5s ease-in-out
+                        transform scaleX(1)
+            a
+                color white
+                letter-spacing 3px
+                transition .5s ease-in-out
+                text-decoration none
+                position relative
+                display flex
+                justify-content center
+                z-index 999
+                height max-content
+                width max-content
+                &::after
+                    content ""
+                    position absolute
+                    height 100%
+                    width 100%
+                    border-bottom 1px solid white
+                    border-radius 0
+                    background-color transparent
+                    transform: scaleX(0)
+                    transition .5s ease-in-out
+     
 
-section#section_two
+#section_two
     width 100%
     display flex
     a
@@ -168,7 +180,9 @@ section#section_two
         cursor pointer
         margin 20px 30px
         background rgba(0,0,0,0.09)
-        background grey
+        background darkblue
+        font-family sans-serif
+        text-decoration none
         span
             display block
             padding 15px 40px
@@ -178,24 +192,35 @@ section#section_two
                 height 0
                 position  absolute
                 transition  all 0.2s linear
-                background  azul
-                
+            &::before
+                background-color #750979
+            &::after
+                background-color #ff9700     
         &::before, &::after
             content ""
             width 0
             height 5px
             position absolute
             transition all 0.2s linear
-            background azul       
+            background: linear-gradient(-90deg, rgba(117,9,121,1) 0%, rgba(255,151,0,1) 100%);      
         &:hover
             &::before, &::after
                 width 100%
             span
                 &::before, &::after
                     height  100%
+        &:nth-child(7)
+            &:hover
+                &::before, &::after
+                    width 70%
+                span
+                    &::before, &::after
+                        height  70%   
+
     .btn-1
         &::before, &::after
             transition-delay 0.2s
+            background: linear-gradient(90deg, rgba(117,9,121,1) 0%, rgba(255,151,0,1) 100%);  
         &::before
             right 0
             top 0
@@ -349,10 +374,12 @@ section#section_two
             left 50%
             top 0
             transition-delay 0.2s
+            background: linear-gradient(90deg, rgba(117,9,121,0) 0%, rgba(117,9,121,1) 25%, rgba(255,151,0,1) 75%, rgba(255,151,0,0) 100%);
         &::after
             right  50%
             bottom 0
             transition-delay 0.2s
+            background: linear-gradient(90deg, rgba(117,9,121,0) 0%, rgba(117,9,121,1) 25%, rgba(255,151,0,1) 75%, rgba(255,151,0,0) 100%);
         &:hover
             &::before, &::after
                 transition-delay 0.2s
@@ -364,7 +391,9 @@ section#section_two
                 right 0
                 bottom 50%
                 transition-delay 0.2s 
+                background: linear-gradient(180deg, rgba(117,9,121,0) 0%, rgba(255,151,0,1) 25%, rgba(255,151,0,1) 75%, rgba(255,151,0,0) 100%);
             &::after
                 left 0
                 top 50% 
-                transition-delay 0.2s                                   
+                transition-delay 0.2s
+                background: linear-gradient(180deg, rgba(117,9,121,0) 0%, rgba(117,9,121,1) 25%, rgba(117,9,121,1) 75%, rgba(255,151,0,0) 100%);                                   
