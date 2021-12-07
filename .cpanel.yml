@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/paulama1/public_html
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp css/style.css $DEPLOYPATH
+    - /bin/cp -R portafolio $DEPLOYPATH
