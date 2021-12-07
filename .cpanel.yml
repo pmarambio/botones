@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/paulama1/repositories/portafolio
+    - export DEPLOYPATH=/home/paulama1/portafolio
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp css/style.css $DEPLOYPATH
