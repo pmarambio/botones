@@ -15,7 +15,7 @@ body {
 }
 #section_one .box {
   width: 20%;
-  height: 5vh;
+  height: 35px;
   margin: 2.5%;
   position: relative;
   overflow: hidden;
@@ -56,54 +56,13 @@ body {
 #section_one .box:first-child:hover::after {
   top: 0;
 }
-#section_one .box:nth-child(2) a {
-  border-radius: 0;
-  background-color: #fff;
-}
-#section_one .box:nth-child(2) a::before {
-  content: "Front";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #8b0000;
-  color: #fff;
-  display: block;
-  transition: 0.5s ease-in-out;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scaleY(1);
-  border-radius: 30px;
-}
-#section_one .box:nth-child(2) a::after {
-  content: "Back";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  z-index: 1;
-  transform: scaleY(1);
-  border-radius: 30px;
-}
-#section_one .box:nth-child(2) a:hover::after {
-  left: 0;
-  top: 0;
-  transition: 0.5s ease-in-out;
-  transform: scaleY(1);
-}
-#section_one .box:nth-child(2) a:hover::before {
-  left: 0;
+#section_one .box:nth-child(2)::after {
+  left: 100%;
   top: -100%;
-  transition: 0.5s ease-in-out;
-  transform: scaleY(1);
+}
+#section_one .box:nth-child(2):hover::after {
+  left: 0;
+  top: 0;
 }
 #section_one .box:nth-child(3)::after {
   left: -100%;

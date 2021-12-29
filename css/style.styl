@@ -17,7 +17,7 @@ body
     position relative
     .box
         width 20%
-        height 5vh
+        height 35px
         margin  2.5%
         position relative
         overflow hidden
@@ -55,51 +55,13 @@ body
                 &::after
                     top 0
         &:nth-child(2)
-            a
-                border-radius 0
-                background-color white
-                &::before
-                    content "Front"
-                    position absolute
-                    height 100%
-                    width 100%
-                    background-color darkred
-                    color white
-                    display block
-                    transition .5s ease-in-out
-                    top 0
-                    left 0
-                    display flex
-                    justify-content center
-                    align-items center
-                    transform scaleY(1)
-                    border-radius 30px
+            &::after
+                left 100%
+                top -100%
+            &:hover
                 &::after
-                    content "Back"
-                    position absolute
-                    height 100%
-                    width 100%
                     left 0
-                    top 100%
-                    display flex
-                    justify-content center
-                    align-items center
-                    background-color black
-                    color white
-                    z-index 1
-                    transform scaleY(1)
-                    border-radius 30px
-                &:hover
-                    &::after
-                        left 0
-                        top 0
-                        transition .5s ease-in-out
-                        transform scaleY(1)
-                    &::before   
-                        left 0
-                        top -100% 
-                        transition .5s ease-in-out
-                        transform scaleY(1)
+                    top 0 
         &:nth-child(3)
             &::after
                 left -100%
