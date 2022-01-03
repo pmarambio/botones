@@ -165,7 +165,7 @@ h2 {
   color: #fff;
   font-size: 18px;
   cursor: pointer;
-  margin: 20px 30px;
+  margin: 15px 20px;
   background: rgba(0,0,0,0.09);
   background: #000 0;
   font-family: sans-serif;
@@ -428,4 +428,66 @@ h2 {
   top: 50%;
   transition-delay: 0.2s;
   background: linear-gradient(180deg, rgba(117,9,121,0) 0%, #750979 25%, #750979 75%, rgba(255,151,0,0) 100%);
+}
+#section_three {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#section_three a {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px 30px;
+  font-family: sans-serif;
+  text-decoration: none;
+  transition: 0.5s ease-in all;
+  overflow: hidden;
+  position: relative;
+}
+#section_three a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+#section_three a:first-child {
+  background: #000;
+}
+#section_three a:first-child::after {
+  content: "";
+  background: linear-gradient(90deg, #a23a92 0%, #5e0979 24%, #0e016c 46%, #1904b3 69%, #73e1ff 100%);
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.5s ease-in all;
+}
+#section_three a:first-child:hover {
+  transition: 0.5s ease-in all;
+}
+#section_three a:first-child:hover::after {
+  transform: translateX(50%);
+}
+#section_three a:nth-child(2) {
+  background: linear-gradient(90deg, #b80606 0%, #c46700 51%, #ffcf00 100%);
+}
+#section_three a:nth-child(3) {
+  background: linear-gradient(90deg, #7cb806 0%, #00c45a 51%, #07f 100%);
+}
+#section_three a:nth-child(4) {
+  background: linear-gradient(90deg, #0706b8 0%, #7c0e7e 49%, #cf438f 100%);
 }

@@ -154,7 +154,7 @@ h2
         color #fff
         font-size 18px
         cursor pointer
-        margin 20px 30px
+        margin 15px 20px
         background rgba(0,0,0,0.09)
         background #0000000
         font-family sans-serif
@@ -372,4 +372,56 @@ h2
                 left 0
                 top 50% 
                 transition-delay 0.2s
-                background: linear-gradient(180deg, rgba(117,9,121,0) 0%, rgba(117,9,121,1) 25%, rgba(117,9,121,1) 75%, rgba(255,151,0,0) 100%);                                   
+                background: linear-gradient(180deg, rgba(117,9,121,0) 0%, rgba(117,9,121,1) 25%, rgba(117,9,121,1) 75%, rgba(255,151,0,0) 100%);   
+#section_three
+    width 100%
+    display flex
+    flex-wrap wrap
+    justify-content center
+    a
+        width 200px
+        height 35px
+        display flex
+        align-items center
+        justify-content center
+        position relative
+        color #fff
+        font-size 18px
+        cursor pointer
+        margin 20px 30px
+        font-family sans-serif
+        text-decoration none
+        transition 0.5s ease-in all
+        overflow hidden
+        position relative
+        span
+            display flex
+            align-items center
+            justify-content center
+            width 100%
+            height 100%
+            position absolute
+            text-align center
+            z-index 2
+        &:first-child
+            background #000000
+            &::after
+                content ""
+                background: linear-gradient(90deg, rgba(162,58,146,1) 0%, rgba(94,9,121,1) 24%, rgba(14,1,108,1) 46%, rgba(25,4,179,1) 69%, rgba(115,225,255,1) 100%);
+                width 200%
+                height 100%
+                position absolute
+                top 0
+                right 0
+                z-index 1
+                transition 0.5s ease-in all
+            &:hover
+                transition 0.5s ease-in all
+                &::after
+                    transform translateX(50%)   
+        &:nth-child(2)
+            background: linear-gradient(90deg, rgba(184,6,6,1) 0%, rgba(196,103,0,1) 51%, rgba(255,207,0,1) 100%);
+        &:nth-child(3)
+            background: linear-gradient(90deg, rgba(124,184,6,1) 0%, rgba(0,196,90,1) 51%, rgba(0,119,255,1) 100%);
+        &:nth-child(4)
+            background: linear-gradient(90deg, rgba(7,6,184,1) 0%, rgba(124,14,126,1) 49%, rgba(207,67,143,1) 100%);    
