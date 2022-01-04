@@ -407,7 +407,7 @@ h2
             background #000000
             &::after
                 content ""
-                background: linear-gradient(90deg, rgba(162,58,146,1) 0%, rgba(94,9,121,1) 24%, rgba(14,1,108,1) 46%, rgba(25,4,179,1) 69%, rgba(115,225,255,1) 100%);
+                background linear-gradient(90deg, rgba(162,58,146,1) 0%, rgba(94,9,121,1) 24%, rgba(14,1,108,1) 46%, rgba(25,4,179,1) 69%, rgba(115,225,255,1) 100%)
                 width 200%
                 height 100%
                 position absolute
@@ -420,8 +420,65 @@ h2
                 &::after
                     transform translateX(50%)   
         &:nth-child(2)
-            background: linear-gradient(90deg, rgba(184,6,6,1) 0%, rgba(196,103,0,1) 51%, rgba(255,207,0,1) 100%);
+            background #000000
+            &::after
+                content ""
+                width 200%
+                height 900%
+                position absolute
+                z-index 1
+                animation no-espiral ease-out forwards
+                animation-duration 0.5s
+                transform translateX(-20%)
+                background radial-gradient(farthest-corner at right, rgba(236,182,9,1) 0%, rgba(143,0,0,1) 25%, rgba(236,182,9,1) 50%, rgba(143,0,0,1) 75%, rgba(236,182,9,1) 100%);
+            &:hover
+                &::after
+                    animation espiral ease-out forwards
+                    animation-duration 3s
         &:nth-child(3)
-            background: linear-gradient(90deg, rgba(124,184,6,1) 0%, rgba(0,196,90,1) 51%, rgba(0,119,255,1) 100%);
+            background: linear-gradient(90deg, rgba(124,184,6,1) 0%, rgba(0,119,255,1) 32%, rgba(124,184,6,1) 66%, rgba(0,119,255,1) 100%);
+            &::after
+                content ""
+                width 200%
+                height 100%
+                position absolute
+                z-index 1
+                transform translateX(25%) 
+                background: linear-gradient(90deg, rgba(124,184,6,1) 0%, rgba(0,119,255,1) 32%, rgba(124,184,6,1) 66%, rgba(0,119,255,1) 100%);
+            &:hover
+               &:after 
+                   animation linea infinite
+                   animation-duration 3s
         &:nth-child(4)
-            background: linear-gradient(90deg, rgba(7,6,184,1) 0%, rgba(124,14,126,1) 49%, rgba(207,67,143,1) 100%);    
+            background linear-gradient(90deg, rgba(7,6,184,1) 0%, rgba(124,14,126,1) 49%, rgba(207,67,143,1) 100%)
+            &:after
+                content ""
+                width 100%
+                height 100%
+                position absolute
+                z-index 1
+                transition 0.5s ease all
+                opacity 1
+                background: linear-gradient(90deg, rgba(255,187,238,1) 0%, rgba(227,48,134,1) 50%, rgba(133,11,111,1) 100%);
+            &:hover
+                &:after
+                    opacity 0
+                    transition 1s ease all
+
+@keyframes espiral 
+    0%
+        transform translateX(-20%)
+    100%
+        transform translateX(20%)
+@keyframes no-espiral 
+    0%
+        transform translateX(20%)
+    100%
+        transform translateX(-20%)    
+@keyframes linea 
+    0%
+       transform translateX(25%) 
+    50%
+        transform translateX(-25%)     
+    100%
+        transform translateX(25%)              
